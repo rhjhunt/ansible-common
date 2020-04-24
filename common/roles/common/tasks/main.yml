@@ -2,7 +2,7 @@
 - name: Install motd file
   copy:
     src: motd
-    path: /etc/motd
+    dest: /etc/motd
     owner: root
     group: root
     mode: '0644'
