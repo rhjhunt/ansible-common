@@ -1,0 +1,11 @@
+---
+- name: Install motd file
+  file:
+    src: motd
+    path: /etc/motd
+    owner: root
+    group: root
+    mode: '0644'
+    seuser: system_u
+    serole: object_r
+    setype: etc_t
