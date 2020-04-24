@@ -1,6 +1,6 @@
 ---
 - name: Install motd file
-  file:
+  copy:
     src: motd
     path: /etc/motd
     owner: root
