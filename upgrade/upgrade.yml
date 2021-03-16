@@ -22,4 +22,4 @@
     - name: Reboot system if kernel was updated
       reboot:
       when:
-        - reboot_required.rc == 0
+        - reboot_required.rc == 1
