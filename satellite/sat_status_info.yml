@@ -1,0 +1,17 @@
+---
+- name: Satellite playbook
+  hosts: localhost
+  connection: local
+  tasks:
+
+    - name: Satellite Status
+      redhat.satellite.status_info:
+        username: "jhunt"
+        password: "Jker104!"
+        server_url: "https://shadowsat1.usersys.redhat.com"
+        validate_certs: no
+      register: satellite_status
+
+    - name: Check Satellite Status
+      debug:
+        msg: "{{ satellite_status }}"
